@@ -40,14 +40,10 @@ public class ApiServiceGetRegionerImpl implements ApiServiceGetRegioner {
     }
 
 
-    @Override
-    public Region findByKode(String regionKode) {
-        return regionRepository.findByKode(regionKode);
-    }
 
     @Override
     public Region findRegionByKode(String regionKode) {
-        return regionRepository.findByKode(regionKode);
+        return regionRepository.findRegionByKode(regionKode);
     }
 
     @Override

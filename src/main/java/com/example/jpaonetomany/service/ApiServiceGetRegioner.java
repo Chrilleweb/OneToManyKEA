@@ -7,9 +7,8 @@ import java.util.List;
 public interface ApiServiceGetRegioner {
     List<Region> getRegioner();
 
-    Region findByKode(String kode);
+    Region findRegionByKode(String kode);
 
-    Region findRegionByKode(String regionKode);
 
     void deleteRegion(Region regionToDelete);
 }
