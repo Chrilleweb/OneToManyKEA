@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -39,6 +38,25 @@ public class ApiServiceGetRegionerImpl implements ApiServiceGetRegioner {
         saveRegioner(regioner);
         return regioner;
     }
+
+
+    @Override
+    public Region findByKode(String regionKode) {
+        return regionRepository.findByKode(regionKode);
+    }
+
+    @Override
+    public Region findRegionByKode(String regionKode) {
+        return regionRepository.findByKode(regionKode);
+    }
+
+    @Override
+    public void deleteRegion(Region regionToDelete) {
+        if (regionToDelete != null) {
+            regionRepository.delete(regionToDelete);
+        }
+    }
+
 
 
 }
